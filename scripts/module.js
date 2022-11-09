@@ -1,7 +1,3 @@
-Hooks.once('init', async function() {
-
-});
-
-Hooks.once('ready', async function() {
-
-});
+Hooks.once('init', PK.init);
+Hooks.once('ready', PK.ready);
+Hooks.on('getSceneControlButtons', PK.getSceneControlButtons);
