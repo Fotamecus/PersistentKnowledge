@@ -1,7 +1,7 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "persistent-knowledge",
+  "title": "Persistent Knowledge",
+  "description": "A module for FoundryVTT that allows configuration of custom 'learnable' information about each actor, and an interface for a Gamemaster to prompt checks and reward information.",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
@@ -12,9 +12,9 @@
   },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Rastafa",
+      "url": "https://github.com/Fotamecus",
+      "discord": "Rastafa#6869"
     }
   ],
   "relationships": {
