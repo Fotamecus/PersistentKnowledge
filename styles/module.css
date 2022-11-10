@@ -1,0 +1,19 @@
+.pk-settings-form input[type="checkbox"] {
+    vertical-align: sub;
+}
+
+.pk-settings-form .flex-parent {
+    display: flex;
+}
+
+.pk-settings-form .flex-1 {
+    flex: 1;
+}
+
+.pk-settings-form .mb5 {
+    margin-bottom: 5px;
+}
+
+.pk-settings-form .sub-form {
+    margin:5px 0 10px 0;
+}

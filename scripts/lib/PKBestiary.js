@@ -1,4 +1,4 @@
-export default class PKBestiary extends FormApplication {
+class PKBestiary extends FormApplication {
     constructor(...args) {
         super(...args);
         game.users.apps.push(this);

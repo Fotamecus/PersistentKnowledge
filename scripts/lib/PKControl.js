@@ -1,4 +1,4 @@
-export default class PKControl extends FormApplication {
+class PKControl extends FormApplication {
     constructor(...args) {
         super(...args);
         game.users.apps.push(this);

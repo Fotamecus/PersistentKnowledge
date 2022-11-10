@@ -1,0 +1,78 @@
+<form class="pk-settings-form" autocomplete="off" onsubmit="event.preventDefault();">
+    <fieldset>
+        <legend>{{localize "PK.identifiableHeader"}}</legend>
+        <input type="checkbox" id="ac" name="ac" {{#if identifiables.ac}}checked="true"{{/if}}">
+        <label for="ac">Armor Class</label>
+        <br>
+        <input type="checkbox" id="attacks" name="attacks" {{#if identifiables.attacks}}checked="true"{{/if}}">
+        <label for="attacks">Attacks</label>
+        <br>
+        <input type="checkbox" id="level" name="level" {{#if identifiables.level}}checked="true"{{/if}}">
+        <label for="level">Challenge Rating</label>
+        <br>
+        <input type="checkbox" id="type" name="type" {{#if identifiables.type}}checked="true"{{/if}}">
+        <label for="type">Creature Type</label>
+        <br>
+        <input type="checkbox" id="immunities" name="immunities" {{#if identifiables.immunities}}checked="true"{{/if}}">
+        <label for="immunities">Damage Immunities</label>
+        <br>
+        <input type="checkbox" id="dr" name="dr" {{#if identifiables.dr}}checked="true"{{/if}}">
+        <label for="dr">Damage Reduction</label>
+        <br>
+        <input type="checkbox" id="resistances" name="resistances" {{#if identifiables.resistances}}checked="true"{{/if}}">
+        <label for="resistances">Damage Resistances</label>
+        <br>
+        <input type="checkbox" id="vulnerabilities" name="vulnerabilities" {{#if identifiables.vulnerabilities}}checked="true"{{/if}}">
+        <label for="vulnerabilities">Damage Vulnerabilities</label>
+        <br>
+        <input type="checkbox" id="hd" name="hd" {{#if identifiables.hd}}checked="true"{{/if}}">
+        <label for="hd">Hit Dice</label>
+        <br>
+        <input type="checkbox" id="hp" name="hp" {{#if identifiables.hp}}checked="true"{{/if}}">
+        <label for="hp">Hit Points</label>
+        <br>
+        <input type="checkbox" id="languages" name="languages" {{#if identifiables.languages}}checked="true"{{/if}}">
+        <label for="languages">Languages</label>
+        <br>
+        <input type="checkbox" id="saves" name="saves" {{#if identifiables.saves}}checked="true"{{/if}}">
+        <label for="saves">Saving Throws</label>
+        <br>
+        <input type="checkbox" id="senses" name="senses" {{#if identifiables.senses}}checked="true"{{/if}}">
+        <label for="senses">Senses</label>
+        <br>
+        <input type="checkbox" id="speed" name="speed" {{#if identifiables.speed}}checked="true"{{/if}}">
+        <label for="speed">Speed</label>
+        <br>
+        <input type="checkbox" id="specialFeatures" name="specialFeatures" {{#if identifiables.specialFeatures}}checked="true"{{/if}}">
+        <label for="specialFeatures">Special Features</label>
+        <br>
+        <input type="checkbox" id="spellResistance" name="spellResistance" {{#if identifiables.spellResistance}}checked="true"{{/if}}">
+        <label for="spellResistance">Spell Resistance</label>
+        <br>
+        <input type="checkbox" id="spells" name="spells" {{#if identifiables.spells}}checked="true"{{/if}}">
+        <label for="spells">Spells</label>
+    </fieldset>
+    <div class="sub-form">
+        <div class="flex-parent mb5">
+            <div class="flex-1">
+                <label for="baseDC">Base DC</label>
+                <input type="number" id="baseDC" name="baseDC" value="{{#if baseDC}}{{baseDC}}{{else}}15{{/if}}">
+            </div>
+            <div class="flex-1">
+                <label for="intervalDC">Interval DC</label>
+                <input type="number" id="intervalDC" name="intervalDC" value="{{#if intervalDC}}{{intervalDC}}{{else}}5{{/if}}">
+            </div>
+        </div>
+        <div class="flex-parent">
+            <div class="flex-1">
+                <input type="checkbox" id="acBreakdown" name="acBreakdown" {{#if acBreakdown}}checked="true"{{/if}}">
+                <label for="acBreakdown">Show AC Breakdown</label>
+            </div>
+            <div class="flex-1">
+                <input type="checkbox" id="sharedKnowledge" name="sharedKnowledge" {{#if sharedKnowledge}}checked="true"{{/if}}">
+                <label for="sharedKnowledge">Shared Knowledge</label>
+            </div>
+        </div>
+    </div>
+    <button type="submit" id="submit">Submit</button>
+</form>

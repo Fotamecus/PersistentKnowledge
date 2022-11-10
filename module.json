@@ -27,7 +27,8 @@
   "scripts": [
     "scripts/lib/lib.js",
     "scripts/lib/PKBestiary.js",
-    "scripts/lib/PKControl.js"
+    "scripts/lib/PKControl.js",
+    "scripts/lib/PKSettings.js"
   ],
   "styles": [
     "styles/module.css"

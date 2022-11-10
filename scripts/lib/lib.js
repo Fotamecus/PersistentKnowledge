@@ -4,6 +4,22 @@ class PK {
     }
 
     static ready() {
+        game.settings.registerMenu('persistent-knowledge', 'pkSettingsMenu', {
+            name: 'Persistent Knowledge Settings',
+            label: 'Persistent Knowledge Settings',
+            hint: 'Configure Persistent Knowledge',
+            icon: 'fas fa-book',
+            type: PKSettings,
+            restricted: true,
+        });
+
+        game.settings.register('persistent-knowledge', 'pkSettings', {
+            scope: 'world',
+            config: false,
+            type: Object,
+            default: {}
+        });
+        
         console.log('Persistent Knowledge module ready');
     }
 
