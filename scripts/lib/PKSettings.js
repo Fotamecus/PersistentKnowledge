@@ -30,12 +30,12 @@ class PKSettings extends FormApplication {
         const { acBreakdown, baseDC, intervalDC, sharedKnowledge, ...other } = formData;
         const data = {
             acBreakdown: acBreakdown,
-            baseDC: baseDC,
-            intervalDC: intervalDC,
+            baseDC: baseDC == null ? 15 : baseDC, // if baseDC is null, set it to 15
+            intervalDC: intervalDC == null ? 5 : intervalDC, // if intervalDC is null, set it to 5
             sharedKnowledge: sharedKnowledge,
             identifiables: other
         };
-
+        console.log(data);
         game.settings.set('persistent-knowledge', 'pkSettings', data);
     }
 }

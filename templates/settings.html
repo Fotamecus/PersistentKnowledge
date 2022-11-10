@@ -56,11 +56,11 @@
         <div class="flex-parent mb5">
             <div class="flex-1">
                 <label for="baseDC">Base DC</label>
-                <input type="number" id="baseDC" name="baseDC" value="{{#if baseDC}}{{baseDC}}{{else}}15{{/if}}">
+                <input type="number" min=0 max=100 id="baseDC" name="baseDC" value="{{baseDC}}">
             </div>
             <div class="flex-1">
                 <label for="intervalDC">Interval DC</label>
-                <input type="number" id="intervalDC" name="intervalDC" value="{{#if intervalDC}}{{intervalDC}}{{else}}5{{/if}}">
+                <input type="number" min=1 max=100 id="intervalDC" name="intervalDC" value="{{intervalDC}}">
             </div>
         </div>
         <div class="flex-parent">
