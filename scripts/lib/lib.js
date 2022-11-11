@@ -17,7 +17,31 @@ class PK {
             scope: 'world',
             config: false,
             type: Object,
-            default: {}
+            default: {
+                acBreakdown: true,
+                baseDC: 15,
+                intervalDC: 5,
+                sharedKnowledge: false,
+                identifiables: {
+                    ac: true,
+                    attacks: true,
+                    level: true,
+                    type: true,
+                    immunities: true,
+                    dr: true,
+                    resistances: true,
+                    vulnerabilities: true,
+                    hd: true,
+                    hp: true,
+                    languages: true,
+                    saves: true,
+                    senses: true,
+                    speed: true,
+                    specialFeatures: true,
+                    spellResistance: true,
+                    spells: true
+                }
+            }
         });
         
         console.log('Persistent Knowledge module ready');
