@@ -1,3 +1,49 @@
-<div>
-    
+<!--
+    a div wrapping the whole template with class='pk-control'
+    a fieldset containing the following:
+        a label (for the following select) that says 'Select an NPC'
+        a text input field with class 'pk-control-input'
+        a div with class 'pk-control-results' that will contain the results of the search:
+            each result will be a div with class 'pk-control-result'
+            each result will have an image and a name
+            clicking on any result will 'select' it
+    after the fieldset,
+    a div wrapping the detailed information for the selected result
+-->
+<div class="pk-control">
+    <fieldset>
+        <legend>{{localize "PK.controlHeader"}}</legend>
+        <input type="text" class="pk-control-input" placeholder="{{localize "PK.filterPlaceholder"}}" />
+        <div class="pk-control-results">
+            {{#each identifiables}}
+                <div class="pk-control-result" data-id="{{this.id}}">
+                    <img src="{{this.img}}" />
+                    <h4>
+                        <a>{{this.name}}</a>
+                    </h4>
+                </div>
+            {{/each}}
+        </div>
+    </fieldset>
+    <div class="pk-control-details">
+        {{#each identifiables}}
+            <div class="pk-control-detail hidden" data-id="{{this.id}}">
+                <div class="pk-control-detail-header">
+                    <img src="{{this.img}}" />
+                    <h4>
+                        <span>{{this.name}}</span>
+                    </h4>
+                </div>
+                <div class="pk-control-detail-body">
+                    {{#each @root.settings.identifiables}}
+                        {{#if this}}
+                            <div class="pk-property">
+                                <span>{{@key}}</span>
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
 </div>

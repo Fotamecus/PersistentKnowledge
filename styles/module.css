@@ -15,5 +15,66 @@
 }
 
 .pk-settings-form .sub-form {
-    margin:5px 0 10px 0;
+    margin: 5px 0 10px 0;
+}
+
+.pk-control .pk-control-results,
+.pk-control .pk-control-details-header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+}
+
+.pk-control .pk-control-results {
+    overflow-y: scroll;
+    height: 202px;
+}
+
+.pk-control .pk-control-result,
+.pk-control .pk-control-detail-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.pk-control .pk-control-result {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.pk-control .pk-control-result.hidden {
+    display: none;
+}
+
+.pk-control .pk-control-result:hover,
+.pk-control .pk-control-result.selected {
+    border: 1px solid #ff0000;
+}
+
+.pk-control .pk-control-result img,
+.pk-control .pk-control-detail-header img {
+    height: 48px;
+    width: 48px;
+    border-radius: unset;
+}
+
+.pk-control .pk-control-result h4,
+.pk-control .pk-control-detail-header h4 {
+    margin: 0 0 0 8px;
+    width: 100%;
+}
+
+.pk-control .pk-control-result a,
+.pk-control .pk-control-detail-header span {
+    display: inline-block;
+    line-height: 48px;
+    width: 100%;
+}
+
+.pk-control .pk-control-detail.hidden {
+    display: none;
+}
+
+.pk-control .pk-control-detail-body {
+    display: flex;
+    flex-direction: column;
 }

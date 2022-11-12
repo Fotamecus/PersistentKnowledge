@@ -1,3 +1,27 @@
 {
-    "PK.identifiableHeader": "Identifiable Properties"
+    "PK.identifiableHeader": "Identifiable Properties",
+    "PK.controlHeader": "Select an NPC",
+    "PK.filterPlaceholder": "Filter",
+    "PK.ac": "Armor Class",
+    "PK.attacks": "Attacks",
+    "PK.level": "Challenge Rating",
+    "PK.type": "Creature Type",
+    "PK.immunities": "Damage Immunities",
+    "PK.dr": "Damage Reduction",
+    "PK.resistances": "Damage Resistances",
+    "PK.vulnerabilities": "Damage Vulnerabilities",
+    "PK.hd": "Hit Dice",
+    "PK.hp": "Hit Points",
+    "PK.languages": "Languages",
+    "PK.saves": "Saving Throws",
+    "PK.senses": "Senses",
+    "PK.speed": "Speed",
+    "PK.specialFeatures": "Special Features",
+    "PK.spellResistance": "Spell Resistance",
+    "PK.spells": "Spells",
+    "PK.baseDC": "Base DC",
+    "PK.intervalDC": "Interval DC",
+    "PK.acBreakdown": "Show AC Breakdown",
+    "PK.sharedKnowledge": "Shared Knowledge",
+    "PK.submit": "Submit"    
 }
