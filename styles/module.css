@@ -18,6 +18,16 @@
     margin: 5px 0 10px 0;
 }
 
+.pk-control .pk-control-details {
+    margin: 2px;
+    padding-top: 5px;
+}
+
+.pk-control .pk-control-detail-body {
+    height: 385px;
+    overflow-y: scroll;
+}
+
 .pk-control .pk-control-results,
 .pk-control .pk-control-details-header {
     display: flex;
@@ -74,7 +84,41 @@
     display: none;
 }
 
+.pk-control .pk-control-detail-header {
+    border-bottom: 1px solid black;
+}
+
 .pk-control .pk-control-detail-body {
     display: flex;
     flex-direction: column;
+}
+
+.pk-control .pk-property {
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid black;
+}
+
+.pk-control .pk-property:first-child {
+    border-top: unset;
+}
+
+.pk-control .pk-property-name {
+    min-width: 160px;
+}
+
+.pk-control .pk-property-value {
+    width: 100%;
+}
+
+.pk-control .pk-ability-button {
+    padding: 1px;
+}
+
+.pk-control .pill {
+    float: left;
+    border-radius: 9px;
+    padding: 2px 5px;
+    background: rgba(255, 255, 240, 0.8);
+    margin-right: 3px;
 }

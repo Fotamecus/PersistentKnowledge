@@ -23,5 +23,10 @@
     "PK.intervalDC": "Interval DC",
     "PK.acBreakdown": "Show AC Breakdown",
     "PK.sharedKnowledge": "Shared Knowledge",
-    "PK.submit": "Submit"    
+    "PK.submit": "Submit",
+    "PK.touch": "Touch",
+    "PK.flatFooted": "Flat-Footed",
+    "PK.fort": "Fort",
+    "PK.ref": "Ref",
+    "PK.will": "Will"
 }

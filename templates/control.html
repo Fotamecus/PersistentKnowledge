@@ -23,13 +23,146 @@
                     </h4>
                 </div>
                 <div class="pk-control-detail-body">
-                    {{#each @root.settings.identifiables}}
-                        {{#if this}}
-                            <div class="pk-property">
-                                <span>{{@key}}</span>
+                    {{#if @root.settings.identifiables.ac}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.ac"}}</div>
+                            <div class="pk-property-value">{{this.stats.ac.ac}} (Touch {{this.stats.ac.touch}}, Flat-Footed {{this.stats.ac.flatFooted}})</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.attacks}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.attacks"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.attacks}}
+                                    <div class="pk-attack pk-ability-button">
+                                        <button class="pk-attack-button" data-id="{{this.id}}">{{this.name}}</button>
+                                    </div>
+                                {{/each}}
                             </div>
-                        {{/if}}
-                    {{/each}}
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.level}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.level"}}</div>
+                            <div class="pk-property-value">{{this.stats.level}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.type}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.type"}}</div>
+                            <div class="pk-property-value">{{this.stats.type}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.immunities}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.immunities"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.immunities}}
+                                    <div class="pk-immunity pill">{{this}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.dr}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.dr"}}</div>
+                            <div class="pk-property-value">{{this.stats.dr}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.resistances}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.resistances"}}</div>
+                            <div class="pk-property-value">{{this.stats.resistances}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.vulnerabilities}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.vulnerabilities"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.vulnerabilities}}
+                                    <div class="pk-vulnerability pill">{{this}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.hd}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.hd"}}</div>
+                            <div class="pk-property-value">{{this.stats.hd}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.hp}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.hp"}}</div>
+                            <div class="pk-property-value">{{this.stats.hp}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.languages}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.languages"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.languages}}
+                                    <div class="pk-language pill">{{this}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.saves}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.saves"}}</div>
+                            <div class="pk-property-value">{{localize "PK.fort"}}: {{this.stats.saves.fort}}; {{localize "PK.ref"}}: {{this.stats.saves.ref}}; {{localize "PK.will"}}: {{this.stats.saves.will}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.senses}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.senses"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.senses}}
+                                    <div class="pk-sense pill">{{this}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.speed}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.speed"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.speed}}
+                                    <div class="pk-speed pill">{{this}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.specialFeatures}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.specialFeatures"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.specialFeatures}}
+                                    <div class="pk-special-feature pk-ability-button">
+                                        <button class="pk-special-feature-button" data-id="{{this.id}}">{{this.name}}</button>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.sr}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.spellResistance"}}</div>
+                            <div class="pk-property-value">{{this.stats.sr}}</div>
+                        </div>
+                    {{/if}}
+                    {{#if @root.settings.identifiables.spells}}
+                        <div class="pk-property">
+                            <div class="pk-property-name">{{localize "PK.spells"}}</div>
+                            <div class="pk-property-value">
+                                {{#each this.stats.spells}}
+                                    <div class="pk-spell pk-ability-button">
+                                        <button class="pk-spell-button" data-id="{{this.id}}">{{this.name}}</button>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/if}}
                 </div>
             </div>
         {{/each}}
