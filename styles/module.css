@@ -18,6 +18,15 @@
     margin: 5px 0 10px 0;
 }
 
+.pk-control .pk-control-filters {
+    display: flex;
+}
+
+.pk-control-npc-filter,
+.pk-control-pc-filter {
+    width: 50%;
+}
+
 .pk-control .pk-control-details {
     margin: 2px;
     padding-top: 5px;

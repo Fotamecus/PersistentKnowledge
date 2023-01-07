@@ -1,18 +1,37 @@
 <div class="pk-control">
-    <fieldset>
-        <legend>{{localize "PK.controlHeader"}}</legend>
-        <input type="text" class="pk-control-input" placeholder="{{localize "PK.filterPlaceholder"}}" />
-        <div class="pk-control-results">
-            {{#each identifiables}}
-                <div class="pk-control-result" data-id="{{this.id}}">
-                    <img src="{{this.img}}" />
-                    <h4>
-                        <a>{{this.name}}</a>
-                    </h4>
+    <div class="pk-control-filters">
+        <div class="pk-control-npc-filter">
+            <fieldset>
+                <legend>{{localize "PK.NPCFilterHeader"}}</legend>
+                <input type="text" class="pk-control-input npc" placeholder="{{localize "PK.filterPlaceholder"}}" />
+                <div class="pk-control-results">
+                    {{#each identifiables}}
+                        <div class="pk-control-result npc" data-id="{{this.id}}">
+                            <img src="{{this.img}}" />
+                            <h4>
+                                <a>{{this.name}}</a>
+                            </h4>
+                        </div>
+                    {{/each}}
                 </div>
-            {{/each}}
+            </fieldset>
         </div>
-    </fieldset>
+        <div class="pk-control-pc-filter">
+            <fieldset>
+                <legend>{{localize "PK.PCFilterHeader"}}</legend>
+                <input type="text" class="pk-control-input pc" placeholder="{{localize "PK.filterPlaceholder"}}" />
+                <div class="pk-control-results">
+                    {{#each characters}}
+                        <div class="pk-control-result pc" data-id="{{this.id}}">
+                            <img src="{{this.img}}" />
+                            <h4>
+                                <a>{{this.name}}</a>
+                            </h4>
+                        </div>
+                    {{/each}}
+                </div>
+        </div>
+    </div>
     <div class="pk-control-details">
         {{#each identifiables}}
             <div class="pk-control-detail hidden" data-id="{{this.id}}">

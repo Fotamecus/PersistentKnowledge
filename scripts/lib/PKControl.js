@@ -38,11 +38,14 @@ class PKControl extends FormApplication {
     }
 
     select(event) {
-        this.element.find('.pk-control-result').removeClass('selected');
         const selectedElement = event.target.closest('.pk-control-result');
+        const key = selectedElement.classList.contains('npc') ? 'npc' : 'pc';
+        this.element.find(`.pk-control-result.${key}`).removeClass('selected');
         selectedElement.classList.add('selected');
-        this.element.find('.pk-control-detail').addClass('hidden');
-        this.element.find('.pk-control-detail').filter((_, e) => e.dataset.id === selectedElement.dataset.id).removeClass('hidden');
+        if (key === 'npc') {
+            this.element.find('.pk-control-detail').addClass('hidden');
+            this.element.find('.pk-control-detail').filter((_, e) => e.dataset.id === selectedElement.dataset.id).removeClass('hidden');
+        }
     }
 
     show(type, event) {
@@ -52,7 +55,8 @@ class PKControl extends FormApplication {
     }
 
     updateFilter(event) {
-        this.element.find('.pk-control-result').each((_, e) => {
+        const key = event.target.classList.contains('npc') ? 'npc' : 'pc';
+        this.element.find(`.pk-control-result.${key}`).each((_, e) => {
             if (~e.innerText.toLowerCase().indexOf(event.target.value.toLowerCase())) {
                 e.classList.remove('hidden');
             } else {

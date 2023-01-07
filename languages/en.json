@@ -1,6 +1,7 @@
 {
     "PK.identifiableHeader": "Identifiable Properties",
-    "PK.controlHeader": "Select an NPC",
+    "PK.NPCFilterHeader": "Select an NPC",
+    "PK.PCFilterHeader": "Select a PC",
     "PK.filterPlaceholder": "Filter",
     "PK.ac": "Armor Class",
     "PK.attacks": "Attacks",
